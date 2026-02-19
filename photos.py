@@ -1,0 +1,1 @@
+photos = {"star_photo": "AgACAgIAAxkBAAIBPGmVmfcOXSMlBUzxDCCcG6jq09lfAAKzFWsbvROwSD62Z1CvmJntAQADAgADeQADOgQ"}

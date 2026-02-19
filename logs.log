@@ -3871,3 +3871,509 @@ TypeError: 'NoneType' object is not subscriptable
 2026-02-19 20:04:55,034 - WARNING - Received SIGINT signal
 2026-02-19 20:04:55,035 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
 2026-02-19 20:04:55,036 - INFO - Polling stopped
+2026-02-19 20:38:28,440 - INFO - Start polling
+2026-02-19 20:38:31,324 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:38:50,015 - WARNING - Received SIGINT signal
+2026-02-19 20:38:50,022 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:38:50,022 - INFO - Polling stopped
+2026-02-19 20:42:15,574 - INFO - Start polling
+2026-02-19 20:42:16,789 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:42:49,749 - WARNING - Received SIGINT signal
+2026-02-19 20:42:49,797 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:42:49,799 - INFO - Polling stopped
+2026-02-19 20:46:19,143 - INFO - Пользователь 7716932686 был добавлен в базу данных
+2026-02-19 20:46:19,370 - INFO - Start polling
+2026-02-19 20:46:20,291 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:46:48,957 - INFO - Update id=739652745 is not handled. Duration 8 ms by bot id=7500951384
+2026-02-19 20:46:48,958 - ERROR - Cause exception while process update id=739652745 by bot id=7500951384
+KeyError: 'start_photo'
+Traceback (most recent call last):
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/middlewares/reg_middleware.py", line 10, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/middlewares/antispam_middleware.py", line 22, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/handlers/start.py", line 13, in start_handler
+    await message.answer_photo(photos["start_photo"], caption=f"""
+                               ~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'start_photo'
+2026-02-19 20:47:03,840 - WARNING - Received SIGINT signal
+2026-02-19 20:47:03,875 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:47:03,892 - INFO - Polling stopped
+2026-02-19 20:47:19,825 - INFO - Start polling
+2026-02-19 20:47:20,511 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:47:28,848 - INFO - Update id=739652746 is handled. Duration 442 ms by bot id=7500951384
+2026-02-19 20:47:30,768 - INFO - Update id=739652747 is not handled. Duration 247 ms by bot id=7500951384
+2026-02-19 20:47:30,770 - ERROR - Cause exception while process update id=739652747 by bot id=7500951384
+TypeError: object tuple can't be used in 'await' expression
+Traceback (most recent call last):
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/middlewares/reg_middleware.py", line 10, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/middlewares/antispam_middleware.py", line 22, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/handlers/menu.py", line 15, in on_btn_menu
+    await send_card_of_category(callback.message, "Салаты", 0, user_id)
+  File "/home/fuzzy/Projects/caffe_bot/handlers/menu.py", line 78, in send_card_of_category
+    dish_info = await get_dishes(category, num_in_category)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object tuple can't be used in 'await' expression
+2026-02-19 20:47:57,215 - WARNING - Received SIGINT signal
+2026-02-19 20:47:57,219 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:47:57,223 - INFO - Polling stopped
+2026-02-19 20:50:53,552 - INFO - Start polling
+2026-02-19 20:50:54,337 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:50:57,152 - INFO - Update id=739652748 is handled. Duration 359 ms by bot id=7500951384
+2026-02-19 20:50:58,659 - INFO - Update id=739652749 is handled. Duration 369 ms by bot id=7500951384
+2026-02-19 20:51:00,894 - INFO - Update id=739652750 is handled. Duration 249 ms by bot id=7500951384
+2026-02-19 20:51:02,322 - INFO - Update id=739652751 is handled. Duration 185 ms by bot id=7500951384
+2026-02-19 20:51:03,523 - INFO - Update id=739652752 is handled. Duration 287 ms by bot id=7500951384
+2026-02-19 20:51:04,485 - INFO - Update id=739652753 is handled. Duration 290 ms by bot id=7500951384
+2026-02-19 20:51:06,104 - INFO - Update id=739652754 is handled. Duration 188 ms by bot id=7500951384
+2026-02-19 20:51:06,895 - INFO - Update id=739652755 is handled. Duration 102 ms by bot id=7500951384
+2026-02-19 20:51:07,741 - INFO - Update id=739652756 is handled. Duration 187 ms by bot id=7500951384
+2026-02-19 20:51:08,556 - INFO - Update id=739652757 is handled. Duration 101 ms by bot id=7500951384
+2026-02-19 20:51:09,621 - INFO - Update id=739652758 is handled. Duration 206 ms by bot id=7500951384
+2026-02-19 20:51:11,160 - INFO - Update id=739652759 is handled. Duration 279 ms by bot id=7500951384
+2026-02-19 20:51:17,821 - INFO - Update id=739652760 is handled. Duration 243 ms by bot id=7500951384
+2026-02-19 20:52:07,644 - WARNING - Received SIGINT signal
+2026-02-19 20:52:07,785 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:52:07,786 - INFO - Polling stopped
+2026-02-19 20:52:25,478 - INFO - Пользователь 7716932686 был добавлен в базу данных
+2026-02-19 20:52:25,672 - INFO - Start polling
+2026-02-19 20:52:26,497 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:52:30,340 - INFO - Update id=739652761 is handled. Duration 394 ms by bot id=7500951384
+2026-02-19 20:52:32,080 - INFO - Update id=739652762 is handled. Duration 529 ms by bot id=7500951384
+2026-02-19 20:52:34,315 - INFO - Update id=739652763 is handled. Duration 285 ms by bot id=7500951384
+2026-02-19 20:52:38,661 - INFO - Update id=739652764 is handled. Duration 195 ms by bot id=7500951384
+2026-02-19 20:52:39,585 - INFO - Update id=739652765 is handled. Duration 140 ms by bot id=7500951384
+2026-02-19 20:52:41,400 - INFO - Update id=739652766 is handled. Duration 215 ms by bot id=7500951384
+2026-02-19 20:52:43,731 - INFO - Update id=739652767 is handled. Duration 234 ms by bot id=7500951384
+2026-02-19 20:52:45,553 - INFO - Update id=739652768 is not handled. Duration 7 ms by bot id=7500951384
+2026-02-19 20:52:49,861 - WARNING - Received SIGINT signal
+2026-02-19 20:52:49,862 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:52:49,862 - INFO - Polling stopped
+2026-02-19 20:54:45,095 - INFO - Start polling
+2026-02-19 20:54:45,970 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:54:46,454 - INFO - Update id=739652769 is handled. Duration 351 ms by bot id=7500951384
+2026-02-19 20:55:02,309 - INFO - Update id=739652770 is handled. Duration 7 ms by bot id=7500951384
+2026-02-19 20:55:05,256 - INFO - Update id=739652771 is handled. Duration 9 ms by bot id=7500951384
+2026-02-19 20:55:08,292 - WARNING - Received SIGINT signal
+2026-02-19 20:55:08,295 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:55:08,296 - INFO - Polling stopped
+2026-02-19 20:55:24,909 - INFO - Пользователь 7716932686 был добавлен в базу данных
+2026-02-19 20:55:25,089 - INFO - Start polling
+2026-02-19 20:55:25,996 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:55:26,214 - INFO - Update id=739652772 is handled. Duration 8 ms by bot id=7500951384
+2026-02-19 20:55:29,619 - INFO - Update id=739652773 is handled. Duration 8 ms by bot id=7500951384
+2026-02-19 20:55:43,260 - INFO - Update id=739652774 is handled. Duration 282 ms by bot id=7500951384
+2026-02-19 20:55:44,744 - INFO - Update id=739652775 is handled. Duration 325 ms by bot id=7500951384
+2026-02-19 20:56:20,853 - WARNING - Received SIGINT signal
+2026-02-19 20:56:20,854 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:56:20,855 - INFO - Polling stopped
+2026-02-19 20:56:32,692 - INFO - Start polling
+2026-02-19 20:56:33,338 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:56:33,787 - INFO - Update id=739652776 is handled. Duration 315 ms by bot id=7500951384
+2026-02-19 20:56:36,812 - INFO - Update id=739652777 is handled. Duration 388 ms by bot id=7500951384
+2026-02-19 20:56:42,624 - INFO - Update id=739652778 is not handled. Duration 115 ms by bot id=7500951384
+2026-02-19 20:56:42,625 - ERROR - Cause exception while process update id=739652778 by bot id=7500951384
+TypeError: object list can't be used in 'await' expression
+Traceback (most recent call last):
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/middlewares/reg_middleware.py", line 10, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/middlewares/antispam_middleware.py", line 22, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/handlers/menu.py", line 45, in on_btn_show_all_in_caterory
+    await callback.message.answer(text=f"📁 Выберете блюдо из категории {category}", reply_markup=(await all_cards_in_category_keyboard(category, curent_num)))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/keyboards/inline.py", line 36, in all_cards_in_category_keyboard
+    dishes = await get_dishes(category)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object list can't be used in 'await' expression
+2026-02-19 20:57:36,393 - WARNING - Received SIGINT signal
+2026-02-19 20:57:36,395 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:57:36,396 - INFO - Polling stopped
+2026-02-19 20:58:25,121 - INFO - Start polling
+2026-02-19 20:58:25,836 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:58:26,409 - INFO - Update id=739652779 is handled. Duration 408 ms by bot id=7500951384
+2026-02-19 20:58:28,103 - INFO - Update id=739652780 is handled. Duration 469 ms by bot id=7500951384
+2026-02-19 20:58:29,729 - INFO - Update id=739652781 is handled. Duration 285 ms by bot id=7500951384
+2026-02-19 20:58:31,947 - INFO - Update id=739652782 is handled. Duration 200 ms by bot id=7500951384
+2026-02-19 20:58:33,583 - INFO - Update id=739652783 is handled. Duration 265 ms by bot id=7500951384
+2026-02-19 20:58:34,767 - INFO - Update id=739652784 is not handled. Duration 13 ms by bot id=7500951384
+2026-02-19 20:58:39,363 - INFO - Update id=739652785 is handled. Duration 120 ms by bot id=7500951384
+2026-02-19 20:58:41,411 - INFO - Update id=739652786 is not handled. Duration 21 ms by bot id=7500951384
+2026-02-19 20:58:48,660 - WARNING - Received SIGINT signal
+2026-02-19 20:58:48,661 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 20:58:48,662 - INFO - Polling stopped
+2026-02-19 21:09:43,663 - INFO - Start polling
+2026-02-19 21:09:44,568 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 21:09:48,122 - INFO - Update id=739652787 is handled. Duration 349 ms by bot id=7500951384
+2026-02-19 21:09:49,809 - INFO - Update id=739652788 is not handled. Duration 15 ms by bot id=7500951384
+2026-02-19 21:10:00,134 - INFO - Update id=739652789 is handled. Duration 9 ms by bot id=7500951384
+2026-02-19 21:10:04,951 - INFO - Update id=739652790 is handled. Duration 9 ms by bot id=7500951384
+2026-02-19 21:10:45,824 - WARNING - Received SIGINT signal
+2026-02-19 21:10:46,167 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 21:10:46,168 - INFO - Polling stopped
+2026-02-19 21:11:05,554 - INFO - Start polling
+2026-02-19 21:11:06,465 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 21:11:06,600 - INFO - Update id=739652791 is handled. Duration 7 ms by bot id=7500951384
+2026-02-19 21:11:08,842 - INFO - Update id=739652792 is handled. Duration 9 ms by bot id=7500951384
+2026-02-19 21:11:24,130 - INFO - Update id=739652793 is handled. Duration 9 ms by bot id=7500951384
+2026-02-19 21:11:24,821 - INFO - Update id=739652794 is handled. Duration 10 ms by bot id=7500951384
+2026-02-19 21:12:10,926 - WARNING - Received SIGINT signal
+2026-02-19 21:12:11,023 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 21:12:11,025 - INFO - Polling stopped
+2026-02-19 21:12:32,290 - INFO - Start polling
+2026-02-19 21:12:33,096 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 21:12:38,344 - INFO - Update id=739652795 is handled. Duration 8 ms by bot id=7500951384
+2026-02-19 21:12:52,840 - WARNING - Received SIGINT signal
+2026-02-19 21:12:52,875 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 21:12:52,876 - INFO - Polling stopped
+2026-02-19 21:13:07,714 - INFO - Start polling
+2026-02-19 21:13:08,252 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 21:13:10,546 - INFO - Update id=739652796 is not handled. Duration 2 ms by bot id=7500951384
+2026-02-19 21:13:13,479 - INFO - Update id=739652797 is handled. Duration 380 ms by bot id=7500951384
+2026-02-19 21:13:25,022 - INFO - Update id=739652798 is not handled. Duration 14 ms by bot id=7500951384
+2026-02-19 21:13:27,365 - INFO - Update id=739652799 is not handled. Duration 230 ms by bot id=7500951384
+2026-02-19 21:13:27,366 - ERROR - Cause exception while process update id=739652799 by bot id=7500951384
+TypeError: object InlineKeyboardMarkup can't be used in 'await' expression
+Traceback (most recent call last):
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/middlewares/reg_middleware.py", line 10, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/middlewares/antispam_middleware.py", line 22, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/handlers/menu.py", line 15, in on_btn_menu
+    await send_card_of_category(callback.message, "Салаты", 0, user_id)
+  File "/home/fuzzy/Projects/caffe_bot/handlers/menu.py", line 95, in send_card_of_category
+    """, parse_mode="html", reply_markup=(await dish_card_keyboard(category, num_in_category, cur_card_ammount_in_cart)))
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object InlineKeyboardMarkup can't be used in 'await' expression
+2026-02-19 21:14:40,040 - WARNING - Received SIGINT signal
+2026-02-19 21:14:40,042 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 21:14:40,043 - INFO - Polling stopped
+2026-02-19 21:14:51,389 - INFO - Start polling
+2026-02-19 21:14:52,208 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 21:14:55,987 - INFO - Update id=739652800 is handled. Duration 333 ms by bot id=7500951384
+2026-02-19 21:14:59,151 - INFO - Update id=739652801 is handled. Duration 417 ms by bot id=7500951384
+2026-02-19 21:15:03,490 - INFO - Update id=739652802 is handled. Duration 486 ms by bot id=7500951384
+2026-02-19 21:15:04,529 - INFO - Update id=739652803 is handled. Duration 236 ms by bot id=7500951384
+2026-02-19 21:15:05,671 - INFO - Update id=739652804 is handled. Duration 287 ms by bot id=7500951384
+2026-02-19 21:15:06,981 - INFO - Update id=739652805 is handled. Duration 318 ms by bot id=7500951384
+2026-02-19 21:15:08,049 - INFO - Update id=739652806 is handled. Duration 213 ms by bot id=7500951384
+2026-02-19 21:15:08,981 - INFO - Update id=739652807 is handled. Duration 206 ms by bot id=7500951384
+2026-02-19 21:15:10,129 - INFO - Update id=739652808 is handled. Duration 405 ms by bot id=7500951384
+2026-02-19 21:15:11,151 - INFO - Update id=739652809 is handled. Duration 365 ms by bot id=7500951384
+2026-02-19 21:15:12,201 - INFO - Update id=739652810 is handled. Duration 257 ms by bot id=7500951384
+2026-02-19 21:15:13,021 - INFO - Update id=739652811 is handled. Duration 158 ms by bot id=7500951384
+2026-02-19 21:15:14,629 - INFO - Update id=739652812 is handled. Duration 306 ms by bot id=7500951384
+2026-02-19 21:15:15,669 - INFO - Update id=739652813 is handled. Duration 237 ms by bot id=7500951384
+2026-02-19 21:15:16,782 - INFO - Update id=739652814 is handled. Duration 289 ms by bot id=7500951384
+2026-02-19 21:15:18,080 - INFO - Update id=739652815 is handled. Duration 243 ms by bot id=7500951384
+2026-02-19 21:15:19,677 - INFO - Update id=739652816 is handled. Duration 7 ms by bot id=7500951384
+2026-02-19 21:15:25,617 - INFO - Update id=739652817 is handled. Duration 175 ms by bot id=7500951384
+2026-02-19 21:16:38,558 - WARNING - Received SIGINT signal
+2026-02-19 21:16:38,632 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 21:16:38,634 - INFO - Polling stopped
+2026-02-19 21:16:51,865 - INFO - Start polling
+2026-02-19 21:16:52,220 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 21:16:52,748 - INFO - Update id=739652818 is handled. Duration 363 ms by bot id=7500951384
+2026-02-19 21:17:13,532 - WARNING - Received SIGINT signal
+2026-02-19 21:17:13,533 - INFO - Polling stopped for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 21:17:13,534 - INFO - Polling stopped
+2026-02-19 21:22:19,556 - INFO - Start polling
+2026-02-19 21:22:20,263 - INFO - Run polling for bot @fuzzyteestbot id=7500951384 - 'Шлюхабот'
+2026-02-19 21:22:24,473 - INFO - Update id=739652819 is handled. Duration 394 ms by bot id=7500951384
+2026-02-19 21:22:28,952 - INFO - Update id=739652820 is handled. Duration 837 ms by bot id=7500951384
+2026-02-19 21:22:33,274 - INFO - Update id=739652821 is handled. Duration 288 ms by bot id=7500951384
+2026-02-19 21:22:34,669 - INFO - Update id=739652822 is handled. Duration 254 ms by bot id=7500951384
+2026-02-19 21:29:31,192 - INFO - Пользователь 8023577903 был добавлен в базу данных
+2026-02-19 21:29:31,499 - INFO - Update id=739652823 is handled. Duration 395 ms by bot id=7500951384
+2026-02-19 21:29:33,972 - INFO - Update id=739652824 is handled. Duration 217 ms by bot id=7500951384
+2026-02-19 21:29:42,978 - INFO - Update id=739652825 is handled. Duration 355 ms by bot id=7500951384
+2026-02-19 21:29:46,878 - INFO - Update id=739652826 is handled. Duration 267 ms by bot id=7500951384
+2026-02-19 21:29:48,689 - INFO - Update id=739652827 is handled. Duration 327 ms by bot id=7500951384
+2026-02-19 21:29:49,772 - INFO - Update id=739652828 is handled. Duration 330 ms by bot id=7500951384
+2026-02-19 21:29:50,697 - INFO - Update id=739652829 is handled. Duration 213 ms by bot id=7500951384
+2026-02-19 21:29:51,516 - INFO - Update id=739652830 is handled. Duration 114 ms by bot id=7500951384
+2026-02-19 21:29:54,038 - INFO - Update id=739652831 is handled. Duration 264 ms by bot id=7500951384
+2026-02-19 21:29:56,766 - INFO - Update id=739652832 is handled. Duration 272 ms by bot id=7500951384
+2026-02-19 21:29:58,029 - INFO - Update id=739652833 is handled. Duration 198 ms by bot id=7500951384
+2026-02-19 21:29:58,861 - INFO - Update id=739652834 is handled. Duration 145 ms by bot id=7500951384
+2026-02-19 21:30:00,490 - INFO - Update id=739652835 is handled. Duration 293 ms by bot id=7500951384
+2026-02-19 21:30:02,214 - INFO - Update id=739652836 is handled. Duration 289 ms by bot id=7500951384
+2026-02-19 21:30:03,559 - INFO - Update id=739652837 is handled. Duration 252 ms by bot id=7500951384
+2026-02-19 21:30:05,193 - INFO - Update id=739652838 is not handled. Duration 261 ms by bot id=7500951384
+2026-02-19 21:30:05,194 - ERROR - Cause exception while process update id=739652838 by bot id=7500951384
+TypeError: object InlineKeyboardMarkup can't be used in 'await' expression
+Traceback (most recent call last):
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/middlewares/reg_middleware.py", line 10, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/middlewares/antispam_middleware.py", line 22, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/fuzzy/Projects/caffe_bot/handlers/menu.py", line 45, in on_btn_show_all_in_caterory
+    await callback.message.answer(text=f"📁 Выберете блюдо из категории {category}", reply_markup=(await all_cards_in_category_keyboard(category, curent_num)))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object InlineKeyboardMarkup can't be used in 'await' expression
+2026-02-19 21:31:04,500 - INFO - Update id=739652839 is handled. Duration 168 ms by bot id=7500951384
+2026-02-19 21:31:06,880 - INFO - Update id=739652840 is handled. Duration 237 ms by bot id=7500951384
+2026-02-19 21:49:20,072 - INFO - Update id=739652841 is handled. Duration 282 ms by bot id=7500951384
+2026-02-19 21:49:30,658 - INFO - Update id=739652842 is handled. Duration 375 ms by bot id=7500951384
+2026-02-19 21:49:35,086 - INFO - Update id=739652843 is handled. Duration 303 ms by bot id=7500951384
+2026-02-19 21:49:36,387 - INFO - Update id=739652844 is handled. Duration 285 ms by bot id=7500951384
+2026-02-19 21:49:37,558 - INFO - Update id=739652845 is handled. Duration 275 ms by bot id=7500951384
+2026-02-19 21:49:39,627 - INFO - Update id=739652846 is handled. Duration 426 ms by bot id=7500951384
+2026-02-19 21:49:41,128 - INFO - Update id=739652847 is handled. Duration 224 ms by bot id=7500951384
+2026-02-19 21:49:42,003 - INFO - Update id=739652848 is handled. Duration 101 ms by bot id=7500951384
+2026-02-19 21:49:45,009 - INFO - Update id=739652849 is handled. Duration 256 ms by bot id=7500951384
+2026-02-19 21:49:46,820 - INFO - Update id=739652850 is handled. Duration 220 ms by bot id=7500951384
+2026-02-19 21:49:48,043 - INFO - Update id=739652851 is handled. Duration 226 ms by bot id=7500951384
+2026-02-19 21:49:50,656 - INFO - Update id=739652852 is handled. Duration 323 ms by bot id=7500951384

@@ -1,1 +1,1 @@
-photos = {"star_photo": "AgACAgIAAxkBAAIBPGmVmfcOXSMlBUzxDCCcG6jq09lfAAKzFWsbvROwSD62Z1CvmJntAQADAgADeQADOgQ"}
+photos = {"start_photo": "AgACAgIAAxkBAAIBPGmVmfcOXSMlBUzxDCCcG6jq09lfAAKzFWsbvROwSD62Z1CvmJntAQADAgADeQADOgQ"}

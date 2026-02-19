@@ -1,4 +1,3 @@
-
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from database.models import get_dishes
@@ -6,16 +5,18 @@ from database.models import get_dishes
 
 start_keyboard = InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="Меню 🍽", callback_data="menu")],
-        [InlineKeyboardButton(text="Корзина 🛒", callback_data="open_cart")],
-        [InlineKeyboardButton(text="Помощь ❔", callback_data="help")]
-    ])
+        [InlineKeyboardButton(text="Корзина 🛒", callback_data="my_cart")],
+        [InlineKeyboardButton(text="Помощь ❔", callback_data="help")]])
 
-menu_button_keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="Меню 🍽", callback_data="menu")]]
+menu_button_keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="Меню 🍽", callback_data="menu")]])
 
 
-async def dish_card_keyboard(category, num_in_category, cur_cart_ammount=0):
-    dishes = await get_dishes(category)
+def cart_keyboard():
+    pass
+
+
+def dish_card_keyboard(category, num_in_category, cur_cart_ammount=0):
+    dishes = get_dishes(category)
     dish_id = dishes[num_in_category][0]
 
     if not cur_cart_ammount:
@@ -23,7 +24,7 @@ async def dish_card_keyboard(category, num_in_category, cur_cart_ammount=0):
     else:
         curt_button_row = [
             InlineKeyboardButton(text=f"-", callback_data=f"del_to_cart_{dish_id}_1_{category}_{num_in_category}"),
-            InlineKeyboardButton(text=f"🛒 {cur_cart_ammount}", callback_data=f"open_cart"),
+            InlineKeyboardButton(text=f"🛒 {cur_cart_ammount}", callback_data=f"my_cart"),
             InlineKeyboardButton(text=f"+", callback_data=f"add_to_cart_{dish_id}_1_{category}_{num_in_category}")]
 
     return InlineKeyboardMarkup(inline_keyboard=[
@@ -35,8 +36,8 @@ async def dish_card_keyboard(category, num_in_category, cur_cart_ammount=0):
     ])
 
 
-async def all_cards_in_category_keyboard(category, curent_num):
-    dishes = await get_dishes(category)
+def all_cards_in_category_keyboard(category, curent_num):
+    dishes = get_dishes(category)
     builder = InlineKeyboardBuilder()
     dish_num = 0
     for dish in dishes:

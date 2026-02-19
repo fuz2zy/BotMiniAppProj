@@ -1,10 +1,11 @@
 from database.db import init_db
 from middlewares.reg_middleware import RegisterMiddleware
 from middlewares.antispam_middleware import AntispamMiddleware
-from database.models import add_admin, load_admins, add_dish, add_user, add_to_cart, get_user_cart
+from database.models import add_admin, load_admins, add_dish, add_user, add_to_cart, get_user_cart, load_dishes, get_dish
 from core import dp, bot, message_cooldown, callback_cooldown
 from handlers.start import start_router
 from handlers.menu import menu_router
+from handlers.cart import cart_router
 import asyncio
 
 
@@ -21,6 +22,7 @@ async def main():
         """, "AgACAgIAAxkBAAIBhWmV6MQXuPKjEO2lWx2EtQaAXUN6AAJ4GWsbkjyxSJAAAZYnl_S4RwEAAwIAA3kAAzoE", "Салаты", 20, 30)
 
     await load_admins()
+    await load_dishes()
 
     dp.message.middleware(RegisterMiddleware())
     dp.message.middleware(AntispamMiddleware(message_cooldown, False))
@@ -30,6 +32,7 @@ async def main():
     
     dp.include_router(start_router)
     dp.include_router(menu_router)
+    dp.include_router(cart_router)
 
     await dp.start_polling(bot)
 

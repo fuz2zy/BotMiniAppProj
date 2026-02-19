@@ -1,5 +1,5 @@
 import aiosqlite
-from core import admins, logger
+from core import admins, logger,dishes_info
 from config import db_path
 
 
@@ -53,25 +53,36 @@ async def get_users():
         return list(await cursor.fetchall())
 
 
-async def get_dish(dish_id) -> list:
-    async with aiosqlite.connect(db_path) as db:
-        cursor = await db.execute("SELECT * FROM dishes WHERE dish_id = ?", (dish_id,))
-        return list(await cursor.fetchone())
+def get_dish(dish_id) -> tuple:
+    for dish in dishes_info:
+        if dish[0] == dish_id:
+            return dish
 
 
-async def get_dishes(category, num=None) -> list:
-    async with aiosqlite.connect(db_path) as db:
-        cursor = await db.execute("SELECT * FROM dishes WHERE category = ?", (category,))
-        if type(num) is int:
-            return list(await cursor.fetchall())[num]
-        else:
-            return list(await cursor.fetchall())
+def get_dishes(category: str, num=None):
+    answ = []
+    for dish in dishes_info:
+        if dish[4] == category:
+            answ.append(dish)
+    if type(num) is int:
+        return answ[num]
+    else:
+        return answ
 
 
 async def add_dish(dish_name, dish_description, dish_photo, category, dish_prise, dish_time):
     async with aiosqlite.connect(db_path) as db:
         await db.execute("INSERT OR IGNORE INTO dishes VALUES (NULL, ?, ?, ?, ?, ?, ?)", (dish_name, dish_description, dish_photo, category, dish_prise, dish_time))
         await db.commit()
+        await load_dishes()
+
+
+async def load_dishes():
+    async with aiosqlite.connect(db_path) as db:
+        cursor = await db.execute("SELECT * FROM dishes")
+        dishes_info.clear()
+        for dish in await cursor.fetchall():
+            dishes_info.append(dish)
 
 
 async def get_user_cart(user_id) -> dict[int]:

@@ -42,7 +42,7 @@ async def on_btn_show_all_in_caterory(callback: types.CallbackQuery):
     category = callback.data.split("_")[4]
     curent_num = int(callback.data.split("_")[5])
     await callback.message.delete()
-    await callback.message.answer(text=f"📁 Выберете блюдо из категории {category}", reply_markup=(await all_cards_in_category_keyboard(category, curent_num)))
+    await callback.message.answer(text=f"📁 Выберете блюдо из категории {category}", reply_markup=(all_cards_in_category_keyboard(category, curent_num)))
 
 
 @menu_router.callback_query(F.data[:21] == "show_card_of_category")
@@ -61,7 +61,7 @@ async def on_add_to_cart(callback: types.CallbackQuery):
     category = callback.data.split("_")[5]
     num_in_category = int(callback.data.split("_")[6])
     cur_card_ammount = await add_to_cart(callback.from_user.id, card_id, card_ammount)
-    await callback.message.edit_reply_markup(reply_markup=(await dish_card_keyboard(category, num_in_category, cur_card_ammount)))
+    await callback.message.edit_reply_markup(reply_markup=(dish_card_keyboard(category, num_in_category, cur_card_ammount)))
 
 
 @menu_router.callback_query(F.data[:11] == "del_to_cart")
@@ -71,11 +71,11 @@ async def on_add_to_cart(callback: types.CallbackQuery):
     category = callback.data.split("_")[5]
     num_in_category = int(callback.data.split("_")[6])
     cur_card_ammount = await del_from_cart(callback.from_user.id, card_id, card_ammount)
-    await callback.message.edit_reply_markup(reply_markup=(await dish_card_keyboard(category, num_in_category, cur_card_ammount)))
+    await callback.message.edit_reply_markup(reply_markup=(dish_card_keyboard(category, num_in_category, cur_card_ammount)))
 
 
 async def send_card_of_category(message: types.Message, category, num_in_category, user_id: int):
-    dish_info = await get_dishes(category, num_in_category)
+    dish_info = get_dishes(category, num_in_category)
     dish_id = int(dish_info[0])
     dish_name = dish_info[1]
     dish_description = dish_info[2]
@@ -92,11 +92,11 @@ async def send_card_of_category(message: types.Message, category, num_in_categor
 ️️️📝 Описание:️📝 {dish_description}
 
 </blockquote>
-""", parse_mode="html", reply_markup=(await dish_card_keyboard(category, num_in_category, cur_card_ammount_in_cart)))
+""", parse_mode="html", reply_markup=(dish_card_keyboard(category, num_in_category, cur_card_ammount_in_cart)))
 
 
 async def edit_card_of_category(message: types.Message, category, num_in_category, user_id):
-    dish_info = await get_dishes(category, num_in_category)
+    dish_info = get_dishes(category, num_in_category)
     dish_id = int(dish_info[0])
     dish_name = dish_info[1]
     dish_description = dish_info[2]
@@ -113,14 +113,14 @@ async def edit_card_of_category(message: types.Message, category, num_in_categor
 ️️️📝 Описание:️📝 {dish_description}
 
 </blockquote>
-""", parse_mode="html"), reply_markup=(await dish_card_keyboard(category, num_in_category, cur_card_ammount_in_cart)))
+""", parse_mode="html"), reply_markup=(dish_card_keyboard(category, num_in_category, cur_card_ammount_in_cart)))
 
 
-@menu_router.message(F.text)
-async def photo_handler(message):
-    print(message.text)
-
-
-@menu_router.message(F.photo)
-async def photo_handler(message):
-    print(message.photo[-1])
+# @menu_router.message(F.text)
+# async def photo_handler(message):
+#     print(message.text)
+#
+#
+# @menu_router.message(F.photo)
+# async def photo_handler(message):
+#     print(message.photo[-1])

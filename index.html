@@ -486,7 +486,7 @@ function sendOrder() {
     }))
 
     const total = cartDishes.reduce((sum, d) => sum + d.price * d.qty, 0)
-
+    alert("Кнопа нажата")
     tg.sendData(JSON.stringify({
         items: cartDishes,
         total: total

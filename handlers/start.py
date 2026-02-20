@@ -1,7 +1,7 @@
 from aiogram import Router
 from aiogram.filters import Command
 from aiogram.types import Message
-from keyboards.inline import start_keyboard
+from keyboards.inline import start_keyboard, webapp_keyboard
 from photos import photos
 
 start_router = Router()

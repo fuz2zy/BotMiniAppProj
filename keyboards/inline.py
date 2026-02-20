@@ -1,4 +1,4 @@
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo, ReplyKeyboardMarkup, KeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from database.models import get_dishes
 
@@ -6,15 +6,18 @@ from database.models import get_dishes
 start_keyboard = InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="Меню 🍽", callback_data="menu")],
         [InlineKeyboardButton(text="Корзина 🛒", callback_data="my_cart")],
-        [InlineKeyboardButton(text="Помощь ❔", callback_data="help")],
-        [InlineKeyboardButton(text="Открыть меню", web_app=WebAppInfo(url="https://tg-mini-app-proj.vercel.app"))]
-])
+        [InlineKeyboardButton(text="Помощь ❔", callback_data="help")]])
 
 menu_button_keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="Меню 🍽", callback_data="menu")]])
 
 
 def cart_keyboard():
     pass
+
+
+webapp_keyboard = ReplyKeyboardMarkup(keyboard=[[
+    KeyboardButton(text="Открыть меню", web_app=WebAppInfo(url="https://tg-mini-app-proj.vercel.app"))
+]], resize_keyboard=True)
 
 
 def dish_card_keyboard(category, num_in_category, cur_cart_ammount=0):

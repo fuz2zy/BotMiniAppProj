@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=width-device, initial-scale=1.0">
+    <title>Caffe DEJAVU</title>
+    <script src="hhtps://telegram.org/js/telegram-web-app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <div class="header-top">
+        <div class="logo">
+            DEJAVU
+            <span>Кафе *  Доставка</span>
+        </div>
+        <button class="cart-btn" onclick="">
+            Корзина
+            <div class="cart-ammount" id="cartAmmout">0</div>
+        </button>
+    </div>
+    <div class="categoryes">
+        <button class="cat-btn-active" onclick="">Все</button>
+        <button class="cat-btn-active" onclick="">Горячее</button>
+        <button class="cat-btn-active" onclick="">Пицца</button>
+        <button class="cat-btn-active" onclick="">Салаты</button>
+        <button class="cat-btn-active" onclick="">Напитки</button>
+    </div>
+</div>
+
+<div class="menu" id="menu"></div>
+
+<div class="overlay" id="overlay" onclick=""></div>
+
+<div class="cart-panel" id="cartPanel">
+    <div class="cart-title">
+        Корзина
+        <button class="close-cart" onclick="">*</button>
+    </div>
+    <div id="cartItems"></div>
+        <div class="cart-total" id="cartTotal" style="display:none">
+        <span>Итого</span>
+        <span id="totalSum"></span>
+    </div>
+        <button class="order-btn" id="orderBtn" onclick="">Оформить заказ</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

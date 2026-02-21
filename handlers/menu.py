@@ -116,11 +116,11 @@ async def edit_card_of_category(message: types.Message, category, num_in_categor
 """, parse_mode="html"), reply_markup=(dish_card_keyboard(category, num_in_category, cur_card_ammount_in_cart)))
 
 
-# @menu_router.message(F.text)
-# async def photo_handler(message):
-#     print(message.text)
-#
-#
-# @menu_router.message(F.photo)
-# async def photo_handler(message):
-#     print(message.photo[-1])
+@menu_router.message(F.text)
+async def photo_handler(message):
+    print(message.text)
+
+
+@menu_router.message(F.photo)
+async def photo_handler(message):
+    print(message.photo[-1])
